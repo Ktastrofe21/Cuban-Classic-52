@@ -1,0 +1,112 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils.js';
+import Security from './icons/security.astro';
+import Quality from './icons/quality.astro';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const about2 = t('about2');
+
+interface Elemento {
+  num: number;
+  title: string;
+  text: string;
+  active: boolean;
+}
+---
+
+<section class="relative max-w-7xl mx-auto px-6 py-20 lg:py-32" id="about2">
+  <div class="text-center mb-16 lg:mb-20">
+    <h2 class="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-teal-600 animate-text-fade">
+      {about2.h2}
+    </h2>
+    <div class="mx-auto mt-4 w-24 h-1 bg-gradient-to-r from-emerald-400 to-teal-600 rounded-full"></div>
+  </div>
+
+  <div class="flex flex-col lg:flex-row gap-12 items-start">
+    
+    <div class="lg:w-1/2 relative hidden md:block">
+      <div class="grid grid-cols-2 grid-rows-5 gap-5 h-full min-h-[500px]">
+        <div class="row-span-2 col-span-1 relative group overflow-hidden rounded-xl justify-self-end shadow-xl">
+          <img 
+            loading="lazy"
+            src="/images/Caballero_de_Paris.webp" 
+            alt="Caballero de Paris" 
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+        </div>
+        
+        <div class="row-span-3 col-span-1 relative group overflow-hidden rounded-xl justify-self-end mt-4 shadow-xl">
+          <img 
+            loading="lazy"
+            src="/images/Habana.webp" 
+            alt="Habana" 
+            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+        </div>
+        
+        <div class="row-span-3 col-span-1 relative group overflow-hidden rounded-xl self-center shadow-xl">
+          <img 
+            loading="lazy"
+            src="/images/Cristo_Habana.webp" 
+            alt="Cristo Habana" 
+            class="w-full h-[280px] object-cover transition-transform duration-700 group-hover:scale-105"
+          >
+          <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="lg:w-1/2 space-y-6 lg:pl-8">
+      {about2.elementos.map((elemento: Elemento) => (
+        <div class={`glass-card-hover p-6 rounded-xl transition-all duration-300 ${elemento.active ? 'border-l-4 border-emerald-400' : 'border-l-4 border-transparent'}`}>
+          <div class="flex gap-6 items-start">
+            <div class={`flex-shrink-0 w-14 h-14 rounded-full flex items-center justify-center text-lg font-bold 
+                        ${elemento.active ? 'bg-gradient-to-br from-emerald-500 to-teal-600 text-white shadow-lg' : 'bg-gray-200 text-gray-700'}`}>
+              {elemento.num}
+            </div>
+            
+            <div class="flex-1">
+              <h3 class={`text-xl font-bold mb-2 ${elemento.active ? 'text-emerald-500' : 'text-gray-800'}`}>
+                {elemento.title}
+              </h3>
+              <p class="text-gray-600 leading-relaxed">
+                {elemento.text}
+              </p>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
+<style>
+  .animate-text-fade {
+    animation: textFade 1.5s ease-out forwards;
+  }
+  @keyframes textFade {
+    from { 
+      opacity: 0; 
+      background-position: 100% 50%; 
+    }
+    to { 
+      opacity: 1; 
+      background-position: 0% 50%; 
+    }
+  }
+  
+  .glass-card-hover {
+    background: rgba(255, 255, 255, 0.7); /* Fondo más claro */
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(229, 231, 235, 0.3); /* Borde gris claro */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  }
+  .glass-card-hover:hover {
+    background: rgba(255, 255, 255, 0.9); /* Fondo más claro al hover */
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+  }
+</style>

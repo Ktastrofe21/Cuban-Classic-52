@@ -1,0 +1,118 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils.js';
+import Star from './icons/Star.astro';
+
+const feedback = [
+    {
+        name:'El peruano1',
+        text:'Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.',
+        star:5
+    },
+    {
+        name:'El peruano2',
+        text:'  Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.',
+        star:3
+    },
+    {
+        name:'El peruano3',
+        text:'  Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.',
+        star:5
+    },
+    {
+        name:'El peruano4',
+        text:'  Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.',
+        star:4
+    },
+
+    {
+        name:'El peruano5',
+        text:'  Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.',
+        star:4.5
+    },
+    {
+        name:'El peruano5',
+        text:'  Lorem ipsum is placeholder text commonly used in the graphic, print, and publishing industries for previewing layouts and visual mockups.',
+        star:4.5
+    },
+]
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const feedBack = t('feedback');
+---
+<!-- Slider main container -->
+<section class="my-20">
+  <div class="w-full flex justify-center">
+  <div class="text-center  lg:w-[60%]">
+  <h2 class=" text-5xl font-bold">{feedBack.h2}</h2>
+  <p class="mt-2 text-palete-white-blue">{feedBack.p}</p>
+</div>
+</div>
+  <div class="swiper h-[300px] px-5 " id="feedback">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper flex  items-center">
+      <!-- Slides -->
+      {
+        //  
+        feedback.map(feed => (
+            <a href="/" class="swiper-slide h-52 flex flex-col items-start justify-center text-start gap-2 bg-[#202020] rounded-lg p-6 hover:scale-105 transition-all">
+               
+              <h4 class="text-lg font-medium">{feed.name}</h4>
+                <p class="text-palete-white-blue">{feed.text}</p> 
+                <div class="flex items-center justify-center gap-x-2">
+                  <div class="flex">
+                    <Star class="w-6 stroke-[#022A1C] fill-[#04DA8D]"/>
+                    <Star class="w-6 stroke-[#022A1C] fill-[#04DA8D]"/>
+                    <Star class="w-6 stroke-[#022A1C] fill-[#04DA8D]"/>
+                    <Star class="w-6 stroke-[#022A1C] fill-[#04DA8D]"/>
+                    <Star class="w-6 stroke-[#022A1C] fill-[#04DA8D]"/>
+                    </div>
+                   <strong>5.0</strong>
+              </div>
+            </a>
+        ))
+      }
+    </div>
+ 
+  
+  
+    <div class="swiper-button-prev text-white"></div>
+      <div class="swiper-button-next text-white "></div>
+  </div>
+</section>
+
+  <script>
+ // @ts-ignore
+ import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+    function useSwipper() {
+      const swiper = new Swiper('.swiper', {
+        slidesPerView: 1,
+      spaceBetween: 25,
+    direction: 'horizontal',
+    centerSlide:'true',
+   fade:'true',
+    grabCursor:'true',
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+breakpoints: {
+  645: {
+      slidesPerView: 2,
+      spaceBetween: 25
+    },
+    // when window width is >= 480px
+    927: {
+      slidesPerView: 3,
+      spaceBetween: 25
+    },
+  }
+});
+
+}
+document.addEventListener("astro:page-load", useSwipper);
+    
+
+
+  </script>

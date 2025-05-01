@@ -1,0 +1,34 @@
+---
+import Header from "../../components/Header.astro";
+import Layout from '../../layouts/Layout.astro';
+import Hero from '../../components/Hero.astro'
+import AboutComp from '../../components/AboutComp.astro'
+import About2 from '../../components/About2.astro'
+import Services1 from '../../components/Services1.astro'
+// import Services2 from '../../components/Services2.astro'
+import Feedback from '../../components/Feedback.astro'
+import Places from '../../components/Places.astro'
+import Footer from '../../components/Footer.astro'
+import TopButton from '../../components/TopButton.astro'
+// import '../../utils/animation.css'
+---
+
+<Layout title="Кубинские классические туры | Служба Такси" desc="Почувствуйте надежность, эффективность и качество, которые может предложить только наша служба такси. Под руководством высококвалифицированных специалистов мы гарантируем безопасную, пунктуальную и комфортную поездку.">
+	<main class="">
+		<TopButton/>
+		<Header/>
+		<Hero/>
+		<section class="py-5 xl:px-24  px-5">
+		<Places />
+		
+		<AboutComp/>
+		<About2/>
+		
+		<Services1/>
+		
+		<!-- <Feedback /> -->
+	</section>
+	</main>
+	<Footer/>
+</Layout>
+

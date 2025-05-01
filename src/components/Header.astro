@@ -1,0 +1,63 @@
+---
+import Logo from './icons/logo.astro'
+import LenguajePicker from './LenguajePicker.astro'
+import MenuOverlay from './react/MenuOverlay'
+import { getLangFromUrl, useTranslations } from '../i18n/utils.js';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const elementos = t('nav');
+
+
+const links = [
+    {
+        name: elementos.places,
+        href:'/#places'
+    },
+    {
+        name:elementos.about,
+        href:'/#about'
+    },
+    {
+        name:elementos.services,
+        href:'/#services'
+    },
+  
+    {
+        name:elementos.feedback,
+        href:'/#feedback'
+    },
+]
+
+
+---
+
+
+<header class="flex justify-between items-center w-full absolute top-0 z-20 pt-5 sm:px-20 px-5 revealHeader">
+    <div>
+    <!-- <Logo class="w-28"> -->
+        <img src="/logo.png" alt="Logo" class="sm:w-40 w-32">
+    </div>
+        <nav class="md:block hidden">
+            <ul class="">
+                <li class=" gap-x-10 flex">
+                    {
+                        links.map(link =>(
+                        <a href={lang === 'en' ? link.href : `/${lang}${link.href}`}
+                        class="hover:text-green-500 transition-colors text-lg">
+                            {link.name}
+                        </a>
+                        ))
+                    }
+                </li>
+            </ul>
+        </nav>
+      
+      <div class="flex sm:gap-10 gap-5">
+       
+            <LenguajePicker/>
+                
+               <MenuOverlay client:visible links = {links}/>
+             
+</div>
+</header>
