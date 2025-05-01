@@ -1,0 +1,67 @@
+---
+import Facebook from './icons/Facebook.astro'
+import Instagram from './icons/Instagram.astro'
+import Whatsapp from './icons/Whatsapp.astro'
+import '../utils/animation.css'
+import { getLangFromUrl, useTranslations } from '../i18n/utils.js';
+import Vk from './icons/Vk.astro';
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const elementos = t('hero');
+
+
+---
+<section class="h-screen grid place-items-center bg-no-repeat bg-cover bg-center relative"
+    style="background-image: url(/images/Car.jpg)">
+
+    <div class="absolute inset-0 bg-gray-800 bg-opacity-60"></div>
+
+    <div class="xl:w-[55%] lg:w-[60%] sm:px-16 scale-100 relative z-10">
+        <div class="grid grid-cols-1 gap-8">
+            <div class="flex flex-col items-center justify-center h-full space-y-5">
+                <h1 class="text-5xl md:text-6xl font-bold text-center text-white revealHero !opacity-100">
+                    {elementos.h1}
+                    <span>{elementos.span}</span> 
+                    {elementos.h12}
+                </h1>
+                <p class="mt-5 text-lg md:text-xl text-gray-200 text-center leading-snug revealHero !opacity-100">
+                    {elementos.p}
+                </p>
+                
+                <div class="flex gap-6 mt-6">
+                    <a href="https://api.whatsapp.com/send?phone=5354560600" target="_blank">
+                        <button class="bg-green-800 hover:bg-green-700 px-10 py-3 text-base md:text-lg rounded-lg text-white font-medium transition-colors shadow-md hover:shadow-lg revealHero !opacity-100">
+                            {elementos.button}
+                        </button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- <div class=" xl:w-[55%] lg:w-[60%] sm:px-20 px-5 textDesapear scale-100 "> //centrar contenido
+        <h1 class="2xl:text-7xl xl:text-6xl text-4xl font-bold sm:text-start text-center revealHero">{elementos.h1} 
+            <span class="text-palete-blue-light">{elementos.span}  </span>
+            {elementos.h12} </h1>
+        <p class="mt-5 sm:text-start text-center text-palete-white-blue revealHero">
+            {elementos.p}
+        </p>
+        <div class="flex sm:justify-start justify-center gap-6 mt-6 revealHero">
+            <a href="https://api.whatsapp.com/send?phone=5358118657" target="_blank">
+            <button  class="bg-palete-blue-dark xl:px-10 xl:py-3 py-2 px-5  rounded-lg hover:shadow-lg hover:shadow-palete-blue-light transition"> {elementos.button}</button>
+        </a>
+        </div> -->
+
+        <!-- <div class="flex gap-x-6 mt-8 sm:justify-start justify-center revealHero">
+            <Whatsapp class="w-10 h-10 hover:scale-110 transition-all"/>
+            <Facebook class="w-10 h-10 hover:scale-110 transition-all"/>
+            <Instagram class="w-10 h-10 hover:scale-110 transition-all"/>
+            <Vk class="w-10 h-10 hover:scale-110 transition-all fill-white"/>
+        </div> -->
+
+
+
+
+
