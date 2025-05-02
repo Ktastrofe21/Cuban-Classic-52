@@ -4,7 +4,6 @@ import Instagram from './icons/Instagram.astro'
 import Whatsapp from './icons/Whatsapp.astro'
 
 import { getLangFromUrl, useTranslations } from '../i18n/utils.js';
-import Vk from './icons/Vk.astro';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -72,6 +71,5 @@ const links = [
         <Whatsapp class="w-10 h-10 hover:scale-110 transition-all"/>
         <Facebook class="w-10 h-10 hover:scale-110 transition-all"/>
         <Instagram class="w-10 h-10 hover:scale-110 transition-all"/>
-        <Vk class="w-10 h-10 hover:scale-110 transition-all fill-white"/>
     </div>
 </footer>

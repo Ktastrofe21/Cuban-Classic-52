@@ -32,16 +32,20 @@ const place = prov.find((place:Place) => place.slug === name)
 
 <Layout title=`${place?.name} | Кубинские классические туры` desc=`Узнайте о маршрутах и ​​наиболее знаковых местах для посещения в городе ${place?.name}.`>
 
-    <section class="h-screen" transition:name={`portada ${name} box`}>
+    <section class="h-screen"
+    >
         <a href={lang === 'en' ? '/#places' : `/${lang}/#places`} class="rounded absolute top-0 left-0 z-50 bg-black w-8 h-8 justify-center items-center flex m-5"> {'<'} </a>
 
         <HeaderPlaces/>
           
            
                 <div class="p-5 revealItinerary aspect-[16/5]">
-                    <h4 class="text-3xl p-5 flex justify-center">{itinerarySec.h4}</h4>
-                <p id="itinerario" class="text-start revealItinerary leading-loose px-5  "></p>    
-             </div>
+                    <h4 class="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-teal-600 
+                    leading-relaxed tracking-tightest font-kerning-auto letter-spacing-wide pb-1 text-center">{itinerarySec.h4}</h4>
+                    <div class="mx-auto mt-4 w-24 h-1 bg-gradient-to-r from-emerald-400 to-teal-600 rounded-full"></div>
+
+                    <p id="itinerario" class="text-start revealItinerary leading-relaxed text-gray-700 text-base sm:text-lg font-semibold px-5"></p>   
+                </div>
              <ButtonsPlaces  placeName={place?.name} lang= {lang}/>
              <div class="h-screen">
                  <PlacesCard placeName={place?.slug} lang={lang} client:visible/>

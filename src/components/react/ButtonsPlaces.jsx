@@ -14,27 +14,42 @@ const elementos = t('prov');
   const nextPlace = currentIndex < prov.length - 1 ? prov[currentIndex + 1] : null;
 
   return (
-    <div className='px-5 flex sm:flex-row flex-col  gap-5'>
-      <a href="https://api.whatsapp.com/send?phone=5358118657"target='_blank'>
-       <button className="bg-palete-blue-dark xl:px-10 xl:py-3 py-2 px-5  rounded-lg hover:shadow-lg hover:shadow-palete-blue-light transition">Book Now</button>
-       </a>
-       <div className='flex justify-around sm:gap-5'>
-       {
-        previousPlace ? (
-          <a href={lang === 'en' ? `/${previousPlace.slug}` : `/${lang}/${previousPlace.slug}`}>
-          <button className='border-2 border-white xl:px-10 xl:py-3 py-2 px-5  rounded-lg hover:shadow-lg hover:shadow-white transition'>{previousPlace.name}</button>
-          </a>
-        ): null
-       }
-        {
-        nextPlace ? (
-          <a href={lang === 'en' ? `/${nextPlace.slug}` : `/${lang}/${nextPlace.slug}`}>
-          <button  className='border-2 border-white xl:px-10 xl:py-3 py-2 px-5  rounded-lg hover:shadow-lg hover:shadow-white transition'>{nextPlace.name}</button>
-          </a>
-        ): null
-       }
-       </div>
-    </div>
+    <div className='px-5 flex flex-col sm:flex-row gap-4 w-full'>
+  <a 
+    href="https://api.whatsapp.com/send?phone=5354560600  " 
+    target='_blank'
+    rel="noopener noreferrer"
+    className="w-full sm:w-auto"
+  >
+    <button className="w-full bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-medium py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+      Book Now
+    </button>
+  </a>
+
+  <div className='flex gap-3 w-full sm:w-auto overflow-x-auto pb-2'>
+    {previousPlace && (
+      <a 
+        href={lang === 'en' ? `/${previousPlace.slug}` : `/${lang}/${previousPlace.slug}`}
+        className="flex-shrink-0"
+      >
+        <button className='bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-emerald-500 dark:border-emerald-400 py-3 px-6 rounded-lg hover:shadow hover:shadow-emerald-500/30 transition-all duration-200 whitespace-nowrap'>
+          ← {previousPlace.name}
+        </button>
+      </a>
+    )}
+    
+    {nextPlace && (
+      <a 
+        href={lang === 'en' ? `/${nextPlace.slug}` : `/${lang}/${nextPlace.slug}`}
+        className="flex-shrink-0"
+      >
+        <button className='bg-white dark:bg-gray-800 text-gray-900 dark:text-white border border-emerald-500 dark:border-emerald-400 py-3 px-6 rounded-lg hover:shadow hover:shadow-emerald-500/30 transition-all duration-200 whitespace-nowrap'>
+          {nextPlace.name} →
+        </button>
+      </a>
+    )}
+  </div>
+</div>
   )
 }
 
