@@ -51,7 +51,7 @@ const links = [
 
 ---
 
-<footer class="h-auto flex items-center md:justify-around justify-start sm:flex-row flex-wrap bg-[#1f1f1f] sm:p-10">
+<footer class="h-auto flex items-center md:justify-around justify-start sm:flex-row flex-wrap dark:bg-gray-900/80 sm:p-10">
     <div class=" md:m-0 m-5 ">
         <!-- <Logo class="w-28"> -->
             <img src="/logo.png" alt="Logo" class="w-40">
@@ -61,7 +61,7 @@ const links = [
             {
                 links.map(link =>(
                 <a href={lang === 'en' ? link.href : `/${lang}${link.href}`} 
-                class="hover:text-palete-blue-light transition-colors">
+                class="hover:text-emerald-600 transition-colors">
                     {link.name}
                 </a>
                 ))

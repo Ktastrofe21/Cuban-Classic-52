@@ -28,36 +28,36 @@ export const languages = {
           },
         prov:{
           visit:'Visit',
-          'h2':'We Will Help You Travel And You Can Consult With Us.',
-          'p':'Discover New horizons with us. Travel, explore and live the city.',
+          'h2':'Your dream vacation starts with us',
+          'p':'Discover cultural horizons where ancient traditions meet modern vitality, and every street invites you to become part of the citys living story.',
           places: [
             {
               name:"Pinar del Río",
               slug:'Pinar del Río',
-              desc:"Tobacco, mogotes, beaches. Exuberant nature, World Heritage Site, Caribbean authenticity, fascinating culture.",
-              img:'/images/pinar_rio.webp',
+              desc:"Tobacco fields, Viñales Valley, mogotes, Cueva del Indio, San Diego hot springs, Soroa, cigar factories, and colonial charm.",
+              img:'/images/Pinar.png',
               href:"/"
           },
          
           {
               name:"Havana",
               slug:'La Habana',
-              desc:"Capital of Cuba, colonial history, iconic architecture, vibrant culture, music and captivating beaches.",
-              img:'/images/cristo_vista_havana.webp',
+              desc:"Historic Old Havana, Malecón seawall, vintage cars, Morro Castle, lively music, rum, museums, and vibrant culture.",
+              img:'/images/Havana.jpg',
               href:"/"
           },
           {
               name:"Matanzas",
               slug:"Matanzas",
-              desc:"Spectacular beaches, warm weather, varied tourist activities and great hospitality.",
-              img:'/images/Parque_Libertad.webp',
+              desc:" Varadero Beach, San Severino Castle, Yumurí Valley, Afro-Cuban culture, and colonial heritage.",
+              img:'/images/Matanzas.png',
               href:"/"
           },
           {
               name:"Central Region",
               slug:"Región Central",
-              desc:"Colonial architecture, traditional music, beautiful beaches and natural parks.",
-              img:'/images/Trinidad.webp',
+              desc:" Blends history, traditional music, natural parks  and beautiful beaches.",
+              img:'/images/Trinidad.png',
               href:"/"
           },
          ]
@@ -66,16 +66,16 @@ export const languages = {
         aboutComp: {
 
             'h2':"About Company",
-            'pdesc':"We stand out for providing unprecedented tourist experiences, offering personalized tours in classic cars that capture the vintage essence of the island. With competitive rates, we are committed to providing quality service that reflects Cuban authenticity and hospitality.",
-            'p':"Discover the island with us and make your visit to Cuba an unforgettable experience.",
-            'secT':"Security",
-            'secP':"We create the conditions so that your trip is completely safe.",
-            'conT':"Comfort",
-            'conP':"Travel with the greatest comfort and the best attention.",
+            'pdesc':"We redefine tourism in Cuba by offering experiences through personalized classic car tours that perfectly capture the island's vintage spirit. Combining competitive pricing with authentic Cuban hospitality, we deliver exceptional service that showcases the true essence of our culture.",
+            'p':"Let us transform your visit into an extraordinary journey.",
+            'secT':"Timely",
+            'secP':"On-time pickups and optimized routes.",
+            'conT':"Authenticity",
+            'conP':" Insider access to non-touristy experiences",
         },
 
         about2:{
-            h2:'Live The Best Experience With Our Work Team.',
+            h2:'Let our team create exceptional experiences for you',
              elementos:[
              {
                 num: '1',
@@ -98,14 +98,14 @@ export const languages = {
               ]
         },
         services: {
-                    h2: "With us you will find the best service on the island.",
-                    p:"We have a team of highly qualified professionals.",
-                    serv1h4: 'Different Destinations',
-                    serv1p: 'Explore a variety of unique destinations, from stunning mountains to vibrant beaches and cities.',
-                    serv2h4: 'Competitive prices',
-                    serv2p: 'We offer competitive prices to ensure your trip is affordable and memorable.',
-                    serv3h4: 'Easy Reservation',
-                    serv3p: 'We make booking your trip a simple and fast process.',
+                    h2: "Delight in finest transport service with us",
+                    p:"Our team of expert professionals adapts seamlessly to every traveler, designing bespoke experiences that exceed expectations.",
+                    serv1h4: 'Excursions',
+                    serv1p: 'Discover vibrant cities, villages, and every hidden gem along the way',
+                    serv2h4: 'Private Transportation',
+                    serv2p: 'Easy booking across our premium vehicles.',
+                    serv3h4: 'Transfers',
+                    serv3p: 'Ride in comfort, enjoy seamless journeys.',
       
         },
         feedback: {

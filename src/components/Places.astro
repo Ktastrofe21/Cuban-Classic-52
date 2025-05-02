@@ -14,27 +14,26 @@ interface Place {
 }
 ---
 
-<section class="max-w-7xl mx-auto px-4 sm:px-6 py-12 sm:py-20" id="places">
-  <!-- Encabezado -->
-  <div class="text-center mb-8 sm:mb-14">
-    <h2 class="text-3xl sm:text-4xl font-bold text-gray-800">
+<section class="max-w-7xl mx-auto px-4 sm:px-6 py-10 sm:py-24" id="places">
+
+  <div class="text-center mb-8 sm:mb-16">
+    <h2 class="text-4xl sm:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-emerald-500 to-teal-600 mb-4 sm:mb-5">
       {elementos.h2}
     </h2>
-    <div class="w-12 sm:w-16 h-1 mx-auto mt-3 sm:mt-4 bg-emerald-500 rounded-full"></div>
-    <p class="mt-4 sm:mt-6 text-gray-600 max-w-2xl mx-auto text-sm sm:text-base px-2 sm:px-0">
+    <div class="w-16 sm:w-20 h-1.5 mx-auto bg-gradient-to-r from-emerald-400 to-teal-500 rounded-full"></div>
+    <p class="mt-4 sm:mt-7 text-gray-700 max-w-2xl mx-auto text-base sm:text-lg px-3 sm:px-0 font-semibold">
       {elementos.p}
     </p>
   </div>
 
-  <!-- Galería - Grid responsivo -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-8">
     {prov.map((place: Place) => (
       <a 
         href={place.slug} 
         class="group transition-all duration-300"
       >
-        <!-- Tarjeta de imagen -->
-        <div class="relative aspect-[4/3] rounded-xl overflow-hidden shadow-md">
+        <!-- Contenedor de imagen más compacto en móvil -->
+        <div class="relative aspect-[3/2] sm:aspect-[4/3] rounded-lg sm:rounded-xl overflow-hidden shadow-md sm:shadow-lg">
           <img
             src={place.img}
             alt={place.name}
@@ -43,12 +42,12 @@ interface Place {
           />
         </div>
         
-        <!-- Contenido textual -->
-        <div class="mt-3 sm:mt-4 px-1 sm:px-2">
-          <h3 class="text-lg sm:text-xl font-semibold text-gray-800 sm:group-hover:text-emerald-600 transition-colors">
+        <!-- Contenido textual más compacto -->
+        <div class="mt-3 sm:mt-5 px-1 sm:px-2">
+          <h3 class="text-lg sm:text-2xl font-semibold text-gray-800 sm:group-hover:text-emerald-600 transition-colors">
             {place.name}
           </h3>
-          <p class="mt-1 text-gray-600 text-sm sm:text-base">
+          <p class="mt-1 sm:mt-2 text-gray-600 text-sm sm:text-lg">
             {place.desc}
           </p>
         </div>

@@ -35,7 +35,6 @@ const links = [
 
 <header class="flex justify-between items-center w-full absolute top-0 z-20 pt-5 sm:px-20 px-5 revealHeader">
     <div>
-    <!-- <Logo class="w-28"> -->
         <img src="/logo.png" alt="Logo" class="sm:w-40 w-32">
     </div>
         <nav class="md:block hidden">
@@ -44,7 +43,7 @@ const links = [
                     {
                         links.map(link =>(
                         <a href={lang === 'en' ? link.href : `/${lang}${link.href}`}
-                        class="hover:text-green-500 transition-colors text-lg">
+                        class="hover:text-emerald-600 transition-colors text-lg">
                             {link.name}
                         </a>
                         ))

@@ -7,62 +7,55 @@ import OpenMenu from "../icons/open-menu";
 const MenuOverlay = ({ links }) => {
   const [navbarOpen, setNavbarOpen] = useState(false);
 
-
-  const handlerChange = () => {
-    const valor = navbarOpen;
-    setNavbarOpen(!valor);
+  const toggleMenu = () => {
+    setNavbarOpen(prev => !prev);
   };
 
-  const closeModal = (e) => {
-    if (e.target.id === "close") {
+  const closeMenu = (e) => {
+    if (e.target.id === "overlay") {
       setNavbarOpen(false);
     }
   };
 
   return (
-    <div className="mobile-menu block md:hidden">
-      {navbarOpen ? (
-        <button
-          onClick={handlerChange}
-          className="flex items-center p-2 bg-[#20202091] rounded-lg"
-        >
-          <CloseMenu className='w-10 h-10 fill-palete-blue-light'/>
-        </button>
-      ) : (
-        <button
-          onClick={handlerChange}
-          className="flex items-center p-2 bg-[#20202091] rounded-lg"
-        >
-          <OpenMenu className='w-10 h-10 fill-palete-blue-light'/>
-        </button>
-      )}
-      <div>
+    <div className="md:hidden">
+      {/* Botón del menú */}
+      <button
+        onClick={toggleMenu}
+        aria-label={navbarOpen ? "Cerrar menú" : "Abrir menú"}
+        className="p-2 rounded-lg bg-transparent hover:bg-gray-800/20 transition-colors duration-200"
+      >
         {navbarOpen ? (
-          <div
-            id="close"
-            className=" fixed transition-all duration-75 delay-75  inset-0   cursor-pointer flex items-start mt-[18%] mr-[4%] justify-center h-screen z-[100]"
-            onClick={closeModal}
-          >
-             <div className=" w-[95%]  fixed  inset-0 mt-[15%] left-[2%] " >
-           <ul className="font-medium flex flex-col py-5 mt-4 rounded-lg bg-palete-blue-dark ">
-                    <li>
-                        {
-                            links.map(link =>(
-                            <a href={link.href} 
-                            id="close"
-                            key={link.name}
-                            className="block py-2 px-3 text-white md:p-0 dark:text-white text-center">
-                                {link.name}
-                            </a>
-                            ))
-                        }
-                    </li>
-                  
-                </ul>
+          <CloseMenu className="w-8 h-8 text-emerald-400/90" />
+        ) : (
+          <OpenMenu className="w-8 h-8 text-emerald-400/90" />
+        )}
+      </button>
+
+      {/* Overlay y menú */}
+      {navbarOpen && (
+        <div
+          id="overlay"
+          onClick={closeMenu}
+          className="fixed inset-0 z-50 bg-black/30 backdrop-blur-sm transition-opacity duration-300"
+        >
+          <div className="absolute top-24 right-4 left-4 bg-white/95 dark:bg-gray-800/95 rounded-lg overflow-hidden animate-fade-in">
+            <ul className="flex flex-col divide-y divide-gray-200/50 dark:divide-gray-700/50">
+              {links.map((link) => (
+                <li key={link.name}>
+                  <a
+                    href={link.href}
+                    className="block py-4 px-6 text-gray-800/90 dark:text-gray-100/90 hover:bg-emerald-50/50 dark:hover:bg-gray-700/50 text-center font-medium transition-colors duration-200"
+                    onClick={() => setNavbarOpen(false)}
+                  >
+                    {link.name}
+                  </a>
+                </li>
+              ))}
+            </ul>
           </div>
-          </div>
-        ) : null}
-      </div>
+        </div>
+      )}
     </div>
   );
 };

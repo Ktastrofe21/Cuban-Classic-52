@@ -20,25 +20,27 @@ const {name} = Astro.params
 const place = prov.find((place:Place) => place.slug === name)
 ---
 
-<div class=" relative xl:h-[500px] sm:h-[400px] h-[250px] bg-cover justify-between flex items-center flex-col"
-style={`background-image: url(${place?.img})`}
-
->
-<div class="absolute h-full w-full bg-opacity-80 bg-blend-multiply bg-gradient-to-t from-[#07111dee] bg-[#252525] z-10">
+<div class="relative xl:h-[500px] sm:h-[400px] h-[250px] bg-cover bg-center flex flex-col items-center justify-center"
+     style={`background-image: url(${place?.img})`}>
+     
+  <!-- Capa de overlay con gradiente -->
+  <div class="absolute inset-0 bg-gradient-to-t from-[#07111dee] via-[#25252580] to-transparent z-10"></div>
+  
+  <!-- Contenedor del contenido centrado -->
+  <div class="flex flex-col items-center justify-center text-center z-20 w-full px-4">
+    <h1 class="md:text-7xl text-4xl font-extrabold text-white drop-shadow-lg">
+      {elementos.visit} {place?.name}
+    </h1>
+    <p class="md:text-base text-sm text-white/90 mt-3 max-w-2xl drop-shadow-md">
+      {place?.desc}
+    </p>
+  </div>
+  
+  <!-- Componente Itinerary (se mantiene abajo) -->
+  <div class="z-20 w-full flex justify-center">
+    <Itinerary client:visible place={place?.slug} lang={lang} />
+  </div>
 </div>
-        <div class="flex flex-col gap-y-3 text-center z-20 mt-10">
-    
-           
-            <h1 class="md:text-7xl text-4xl font-extrabold xl:mt-20 mt-5 sm:mt-10" 
-           >
-            {elementos.visit} {place?.name}</h1>
-            <p class="md:text-base text-sm px-4"
-         
-            >{place?.desc}</p>
-        </div>
-        <Itinerary client:visible place={place?.slug} lang={lang}/>
-        
-</div>   
 
 <!-- <div class="relative xl:h-[500px] sm:h-[400px] h-[250px] bg-cover justify-between flex items-center flex-col"
 style={`background-image: url(${place?.img})`}
