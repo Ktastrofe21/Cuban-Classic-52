@@ -1062,7 +1062,7 @@ export const languages = {
             'h1':'Cuban',
             'h12':'52',
             'span':'Classic',
-            'p':"Disfrute de un servicio de taxi confiable y eficiente con conductores profesionales. Le garantizamos viajes seguros, puntual y cómodo."
+            'p':"Disfrute de un servicio de taxi confiable y eficiente con conductores profesionales. Le garantizamos un viaje seguro, puntual y cómodo."
             ,'button':'Reserva Ahora',
         },
         prov:{

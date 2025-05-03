@@ -24,7 +24,7 @@ const lang = getLangFromUrl(Astro.url);
 		  basic: {
 			title: title,
 			type: "website",
-			image: "/og_image.webp",
+			image: "/og-logo.png",
 		  }
 		}}
 		
@@ -33,7 +33,7 @@ const lang = getLangFromUrl(Astro.url);
 		  meta: [
 			{
 			  name: "twitter:image",
-			  content: "/og_image.webp",
+			  content: "/og-logo.png",
 			},
 			{ name: "twitter:title", content: title },
 			{ name: "twitter:description", content: desc },
@@ -43,7 +43,7 @@ const lang = getLangFromUrl(Astro.url);
 		<meta charset="UTF-8" />
 		<meta name="description" content={desc} />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
+		<link rel="icon" type="image/x-icon" href="/og-logo.png" />
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
 />
 		<meta name="generator" content={Astro.generator} />
