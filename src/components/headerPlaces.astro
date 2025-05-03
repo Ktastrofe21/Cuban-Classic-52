@@ -21,10 +21,9 @@ const place = prov.find((place:Place) => place.slug === name);
 <div class="relative xl:h-[500px] sm:h-[400px] h-[250px] bg-cover bg-center flex flex-col items-center justify-between"
      style={`background-image: url(${place?.img})`}>
      
-  <!-- Overlay con gradiente -->
+
   <div class="absolute inset-0 bg-gradient-to-t from-[#07111dee] via-[#25252580] to-transparent z-10"></div>
   
-  <!-- Contenido superior centrado -->
   <div class="flex flex-col items-center justify-center text-center z-20 w-full px-4 pt-10 sm:pt-16">
     <h1 class="md:text-7xl text-4xl font-extrabold text-white drop-shadow-lg mb-2">
       {elementos.visit} {place?.name}
@@ -34,7 +33,6 @@ const place = prov.find((place:Place) => place.slug === name);
     </p>
   </div>
   
-  <!-- Componente Itinerary - Versión mejorada -->
   <div class="z-20 w-full px-4 pb-8 sm:pb-12">
     <div class="max-w-4xl mx-auto bg-white/10 dark:bg-gray-800/20 backdrop-blur-sm rounded-xl p-4 shadow-lg border border-white/10">
       <Itinerary client:visible place={place?.slug} lang={lang} />

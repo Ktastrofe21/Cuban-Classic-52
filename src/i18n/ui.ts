@@ -23,12 +23,12 @@ export const languages = {
           {'h1':'Cuban ',
             'h12':'52',
             'span':'Classic',
-            'p':'    Experience reliable, efficient taxi service with professional drivers. We guarantee safe, punctual, and comfortable rides.',
+            'p':'Experience reliable, efficient taxi service with professional drivers. We guarantee safe, punctual, and comfortable rides.',
             'button':'Book Now',
           },
         prov:{
           visit:'Visit',
-          'h2':'Your dream vacation starts with us',
+          'h2':'Your Dream Vacation Starts With Us',
           'p':'Discover cultural horizons where ancient traditions meet modern vitality, and every street invites you to become part of the citys living story.',
           places: [
             {
@@ -49,14 +49,14 @@ export const languages = {
           {
               name:"Matanzas",
               slug:"Matanzas",
-              desc:" Varadero Beach, San Severino Castle, Yumurí Valley, Afro-Cuban culture, and colonial heritage.",
+              desc:"Varadero Beach, San Severino Castle, Yumurí Valley, Afro-Cuban culture, and colonial heritage.",
               img:'/images/Matanzas.png',
               href:"/"
           },
           {
               name:"Central Region",
               slug:"Región Central",
-              desc:" Blends history, traditional music, natural parks  and beautiful beaches.",
+              desc:"Blends history, traditional music, natural parks  and beautiful beaches.",
               img:'/images/Trinidad.png',
               href:"/"
           },
@@ -71,34 +71,34 @@ export const languages = {
             'secT':"Timely",
             'secP':"On-time pickups and optimized routes.",
             'conT':"Authenticity",
-            'conP':" Insider access to non-touristy experiences",
+            'conP':"Secret spots only locals know.",
         },
 
         about2:{
-            h2:'Let our team create exceptional experiences for you',
+            h2:'We Create Unforgettable Moments For You',
              elementos:[
              {
                 num: '1',
-                title: 'Travel To Your Place',
-                text: 'Start the booking by sending a message via WhatsApp with your details and preferences.',
+                title: 'Easy and Quick Reservation',
+                text: 'Book in minutes: send us a WhatsApp message with your preferences.',
                 active: false
                 },
                 {
                 num: '2',
-                title: 'Find Your Travel Best Place',
-                text: 'Collaborate with our team to personalize your trip according to your needs.',
+                title: 'Customized Trip Tailored to You',
+                text: 'Our team will help you design the perfect itinerary based on your preferences.',
                 active: false
                 },
                {
                 num: '3',
-                title: 'Enjoy The Journey With Pleasure',
-                text: 'Experience your journey with our best drivers and guides.',
+                title: 'Enjoy an Exclusive Service',
+                text: 'Enjoy first-class service with expert drivers and personalized attention.',
                 active: true
                 }
               ]
         },
         services: {
-                    h2: "Delight in finest transport service with us",
+                    h2: "Delight In Finest Transport Service With Us",
                     p:"Our team of expert professionals adapts seamlessly to every traveler, designing bespoke experiences that exceed expectations.",
                     serv1h4: 'Excursions',
                     serv1p: 'Discover vibrant cities, villages, and every hidden gem along the way',
@@ -109,12 +109,12 @@ export const languages = {
       
         },
         feedback: {
-            h2: 'What clients say about our tours',
+            h2: 'What Clients Say About U',
             p:'Find out what our customers have to say about our tours, as they share their unforgettable experiences and rave reviews.',
         },
         itinerary:[
           {
-            title: "One day tour in Havana",
+            title: "One day in Havana",
             place: ["Havana", "La Habana"],
             details: [
               "Departure time from the hotel ~8:00 Arrival time at the hotel ~17:00-18:00",
@@ -127,7 +127,7 @@ export const languages = {
             ],
           },
           {
-            title: "Sunset Tour in Havana",
+            title: "Sunset in Havana",
             place: ["Havana", "La Habana"],
             details: [
               "Pickup at your accommodation or hotel at 10:00 AM in Varadero.",
@@ -156,7 +156,7 @@ export const languages = {
             ],
           },
           {
-            title: "Havana Tour + Cannon Shot",
+            title: "Havana Cannon Shot",
            place: ["Havana", "La Habana"],
             details: [
               "Pickup at your accommodation or hotel at 10:00 am.",
@@ -184,7 +184,7 @@ export const languages = {
             ],
           },
           {
-            title: "Havana Tour + Tropicana",
+            title: "Havana + Tropicana",
             place: ["Havana", "La Habana"],
             details: [
               "Pickup at your accommodation or hotel at 10:30 am.",
@@ -210,7 +210,7 @@ export const languages = {
             ],
           },
           {
-            title: "Zapata Swamp Tour",
+            title: "Zapata Swamp",
             place: "Matanzas",
             details: [
               "Departure from the hotel at 8 am.",
@@ -230,7 +230,7 @@ export const languages = {
             ],
           },
           {
-            title: "Matanzas Tour",
+            title: "Matanzas",
             place: "Matanzas",
             details: [
               "Departure from the hotel at 9:00 am.",
@@ -262,7 +262,7 @@ export const languages = {
             ],
           },
             {
-            title: "Trinidad - Cienfuegos Tour (Optional Nicho)",
+            title: "Trinidad - Cienfuegos(Optional Nicho)",
             place: ["Central Region", "Región Central"],
             details: [
             "Pickup at your accommodation or hotel at 06:30 am.",
@@ -302,7 +302,7 @@ export const languages = {
             ],
             },
             {
-            title: "Viñales - Soroa Tour",
+            title: "Viñales - Soroa",
             place: "Pinar del Río",
             details: [
             "Pickup at the hotel or accommodation at 8:30 am.",
@@ -358,7 +358,7 @@ export const languages = {
         
             itinerary: [
               "Excursión de un día a Varadero desde La Habana",
-              "One-day excursion to Varadero from Havana",
+              "One-day excursion to Varadero from Havana",      
               "Tour de un día en La Habana",  "Однодневный тур по Гаване",
               "Tour al Atardecer en La Habana",  "Тур на закате в Гаване",
               "Tour por La Habana + Tropicana", "Тур по Гаване + Тропикана",
@@ -1045,7 +1045,7 @@ export const languages = {
         ]
       },
 
-
+  
         es: {
         nav:{ 
           'home':'Inicio',
@@ -1059,89 +1059,89 @@ export const languages = {
           central: "Región Central"
         },   
         hero:{
-            'h1':'CAMINO FÁCIL A',
-            'h12':'LA CIUDAD',
-            'span':'EXPLORAR',
-            'p':"Experimenta la confiabilidad, eficiencia y calidad que solo nuestro servicio de taxis puede ofrecer. Conducidos por profesionales altamente calificados, garantizamos un viaje seguro, puntual y cómodo."
+            'h1':'Cuban',
+            'h12':'52',
+            'span':'Classic',
+            'p':"Disfrute de un servicio de taxi confiable y eficiente con conductores profesionales. Le garantizamos viajes seguros, puntual y cómodo."
             ,'button':'Reserva Ahora',
         },
         prov:{
           visit:'Visita',
-            'h2':'Le ayudaremos a viajar y puede consultar con nosotros.',
-            'p':'Descubre Nuevos horizontes con nosotros. Viaja, explora y vive la ciudad.',
+            'h2':'Tus Vacaciones Soñadas Empiezan con Nosotros',
+            'p':'Descubra horizontes culturales donde las tradiciones antiguas se encuentran con la vitalidad moderna, y cada calle le invita a formar parte de la historia viva de la ciudad.',
             places: [
              
                     {
                      name: "Pinar del Río",
                      slug: 'Pinar del Río',
-                     desc: "Tabaco, mogotes, playas. Naturaleza exuberante, Sitio de Patrimonio Mundial, autenticidad caribeña, cultura fascinante.",
-                     img: '/images/pinar_rio.webp',
+                     desc: "Campos de tabaco, Valle de Viñales, mogotes, Cueva del Indio, aguas termales de San Diego, Soroa, fábricas de tabaco y encanto colonial.",
+                     img: '/images/Pinar.png',
                      href: "/"
                      },
                      {
                      name: "La Habana",
                      slug: 'La Habana',
-                     desc: "Capital de Cuba, historia colonial, arquitectura icónica, cultura vibrante, música y playas cautivadoras.",
-                     img: '/images/cristo_vista_havana.webp',
+                     desc: "La Habana Vieja histórica, el Malecón, autos clásicos, el Castillo del Morro, música animada, ron, museos y una cultura vibrante.",
+                     img: '/images/Havana.jpg',
                      href: "/"
                      },
                      {
                      name: "Matanzas",
                      slug: "Matanzas",
-                     desc: "Playas espectaculares, clima cálido, diversas actividades turísticas y gran hospitalidad.",
-                     img: '/images/Parque_Libertad.webp',
+                     desc: "Playa Varadero, Castillo de San Severino, Valle de Yumurí, cultura afrocubana y herencia colonial.",
+                     img: '/images/Matanzas.png',
                      href: "/"
                      },
                      {
                      name: "Región Central",
                      slug: "Región Central",
-                     desc: "Arquitectura colonial, música tradicional, hermosas playas y parques naturales.",
-                     img: '/images/Trinidad.webp',
+                     desc: "Combina historia, música tradicional, parques naturales y hermosas playas.",
+                     img: '/images/Trinidad.png',
                      href: "/"
                      }
            ]
         },
         aboutComp:{
-              'h2':"Acerca de la compañía",
-              'pdesc':"Nos destacamos por proporcionar experiencias turísticas sin precedentes, ofreciendo tours personalizados en autos clásicos que capturan la esencia vintage de la isla. Con tarifas competitivas, estamos comprometidos con la prestación de un servicio de calidad que refleja la autenticidad cubana y la hospitalidad.",
-              'p':"Descubre la isla con nosotros y haz que tu visita a Cuba sea una experiencia inolvidable.",
-              'secT':"Seguridad",
-              'secP':"Creamos las condiciones para que su viaje sea totalmente seguro.",
-              'conT':"Comfort",
-              'conP':"Viaje con la mayor comodidad y las mejores atenciones.", 
+              'h2':"Acerca de la Compañía",
+              'pdesc':"Redefinimos el turismo en Cuba ofreciendo experiencias a través de recorridos personalizados en autos clásicos que capturan a la perfección el espíritu vintage de la isla. Combinando precios competitivos con la auténtica hospitalidad cubana, brindamos un servicio excepcional que refleja la verdadera esencia de nuestra cultura.",
+              'p':"Permítanos transformar su visita en un viaje extraordinario.",
+              'secT':"Puntualidad",
+              'secP':"Recogidas puntuales y rutas optimizadas.",
+              'conT':"Autenticidad",
+              'conP':"Rincones secretos que sólo los locales conocen.", 
         },
         about2:{
-              h2:'Vive La Mejor Experiencia Con Nuestro Equipo de Trabajo.',
+              h2:'Creamos Momentos Inolvidables Para Ti',
               elementos:[
                  {
                   num: '1',
-                  title: 'Viaja a Tu Lugar',
-                  text: 'Inicia la reserva enviando un mensaje a través de WhatsApp con tus detalles y preferencias.',
-                  activo: false
+                  title: 'Reserva Fácil y Rápida',
+                  text: 'Reserva en minutos: escríbenos por WhatsApp con tus preferencias.',
+                  active: false
                   },
                  {
                   num: '2',
-                  title: 'Encuentre Su Mejor Opción de Viaje',
-                  text: 'Colabora con nuestro equipo para personalizar tu viaje según tus necesidades.',
-                  activo: false
+                  title: 'Viaje Personalizado a tu Medida',
+                  text: 'Nuestro equipo te ayudará a diseñar el itinerario perfecto según tus gustos.',
+                  active: false
                   },
                  {
                   num: '3',
-                  title: 'Disfruta del Viaje con Placer',
-                  text: 'Vive tu viaje con nuestros mejores conductores y guías.',
-                  activo: true
+                  title: 'Disfruta de un Servicio Exclusivo',
+                  text: 'Disfruta de un servicio de primera con conductores expertos y atención personalizada.',
+                  active: true
                   }
                 ]
         },
         services: {
-                  h2: "Con nosotros encontrarás el mejor servicio en la isla.",
-                  p: "Contamos con un equipo de profesionales altamente calificados.",
-                  serv1h4: 'Destinos Diferentes',
-                  serv1p: 'Explora una variedad de destinos únicos, desde impresionantes montañas hasta playas y ciudades vibrantes.',
-                  serv2h4: 'Precios Competitivos',
-                  serv2p: 'Ofrecemos precios competitivos para asegurar que tu viaje sea asequible y memorable.',
-                  serv3h4: 'Reservación Fácil',
-                  serv3p: 'Hacemos que reservar tu viaje sea un proceso simple y rápido.',
+                  h2: "Disfrute Del Mejor Servicio De Transporte",
+                  p: "Nuestro equipo de profesionales expertos se adapta perfectamente a cada viajero, diseñando experiencias a medida que superan las expectativas.",
+                  serv1h4: 'Excursiones',
+                  serv1p: 'Descubra ciudades vibrantes, pueblos y todas las joyas ocultas a lo largo del camino.',
+                  serv2h4: 'Transporte Exclusivo',
+                  serv2p: 'Reserva fácil en nuestros vehículos exclusivos.',
+                  serv3h4: 'Traslado',
+                  serv3p: 'Viaja con comodidad y disfruta de viajes sin interrupciones.',
         },
         feedback: {
               h2: 'Lo que dicen los clientes sobre nuestros tours',
@@ -2096,93 +2096,93 @@ export const languages = {
           central: "Центральный регион"
        },
       hero: {
-        'h1':'ЛЕГКИЙ ПУТЬ ДЛЯ',
-        'h12':'ГОРОДА',
-        'span':'ИЗУЧЕНИЯ',
-        'p':"Почувствуйте надежность, эффективность и качество, которые может предложить только наша служба такси. Под руководством высококвалифицированных специалистов мы гарантируем безопасную, пунктуальную и комфортную поездку."
+        'h1':'Кубинская',
+        'h12':'52',
+        'span':'классика',
+        'p':"Испытайте надежную, эффективную службу такси с профессиональными водителями. Мы гарантируем безопасные, пунктуальные и комфортные поездки."
         ,'button':'Забронируйте сейчас',
        },
       prov:{
         visit:'Посещать',
-          'h2':'Мы поможем вам путешествовать и вы можете проконсультироваться с нами.',
-          'p':'Откройте для себя новые горизонты вместе с нами. Путешествуйте, исследуйте и живите в городе.',
+          'h2':'Отпуск вашей мечты начинается с нами',
+          'p':'Откройте для себя культурные горизонты, где древние традиции встречаются с современной жизнью, а каждая улица приглашает вас стать частью живой истории города.',
           places: [
             {
               name: "Пинар-дель-Рио",
               slug:'Pinar del Río',
-              desc: "Табак, моготы, пляжи. Изобильная природа, объект Всемирного наследия, карибская подлинность, захватывающая культура.",
-              img: '/images/pinar_rio.webp',
+              desc: "Табачные поля, долина Виньялес, моготе, Куэва-дель-Индио, горячие источники Сан-Диего, Сороа, сигарные фабрики и колониальное очарование.",
+              img: '/images/Pinar.png',
               href: "/"
             },
             {
               name: "Гавана",
               slug:'La Habana',
-              desc: "Столица Кубы, колониальная история, культовая архитектура, живая культура, музыка и завораживающие пляжи.",
-              img: '/images/cristo_vista_havana.webp',
+              desc: "Историческая Старая Гавана, набережная Малекон, старинные автомобили, замок Морро, живая музыка, ром, музеи и яркая культура.",
+              img: '/images/Havana.jpg',
               href: "/"
             },
             {
               name: "Матансас",
               slug:"Matanzas",
-              desc: "Впечатляющие пляжи, теплое климат, разнообразные туристические мероприятия и прекрасное гостеприимство.",
-              img: '/images/Parque_Libertad.webp',
+              desc: "Пляж Варадеро, замок Сан-Северино, долина Юмури, афро-кубинская культура и колониальное наследие.",
+              img: '/images/Matanzas.png',
               href: "/"
             },
             {
               name: "Центральный регион",
               slug:"Región Central",
-              desc: "Колониальная архитектура, традиционная музыка, красивые пляжи и природные парки.",
-              img: '/images/Trinidad.webp',
+              desc: "Сочетает в себе историю, традиционную музыку, природные парки и прекрасные пляжи.",
+              img: '/images/Trinidad.png',
               href: "/"
             }
          ]
         }    ,
       aboutComp:{
             'h2':"О компании",
-            'pdesc':"Мы выделяемся тем, что предоставляем беспрецедентные туристические впечатления, предлагая индивидуальные туры на классических автомобилях, которые передают винтажную сущность острова. Благодаря конкурентоспособным ценам мы стремимся предоставлять качественные услуги, отражающие кубинскую аутентичность и гостеприимство.",
-            'p':"Откройте для себя остров вместе с нами и сделайте свой визит на Кубу незабываемым.",
-            'secT':"Безопасность",
-            'secP':"Мы создаем условия для того, чтобы ваша поездка была полностью безопасной.",
-            'conT':"Комфорт",
-            'conP':"Путешествуйте с максимальным комфортом и лучшим вниманием.",
+            'pdesc':"Мы переопределяем туризм на Кубе, предлагая впечатления через персонализированные туры на классических автомобилях, которые идеально передают винтажный дух острова. Сочетая конкурентоспособные цены с подлинным кубинским гостеприимством, мы предоставляем исключительный сервис, демонстрирующий истинную сущность нашей культуры.",
+            'p':"Позвольте нам превратить ваш визит в необыкновенное путешествие.",
+            'secT':"Своевременный",
+            'secP':"Своевременная подача автомобиля и оптимизированные маршруты.",
+            'conT':"Подлинность",
+            'conP':"Секретные места, известные только местным жителям.",
            },
       about2:{
-            h2:'Получайте лучший опыт работы с нашей рабочей командой.',
+            h2:'Мы создаем для вас незабываемые моменты',
             elementos:[
               {
                 num: '1',
-                title: 'Путешествие к вам',
-                text: 'Начните бронирование, отправив сообщение через WhatsApp со своими данными и предпочтениями.',
-                активный: false
+                title: 'Легкое и быстрое бронирование',
+                text: 'Забронируйте за считанные минуты: отправьте нам сообщение в WhatsApp с вашими предпочтениями.',
+                active: false
               },
                {
                 num: '2',
-                title: 'Найдите свое лучшее место для путешествия',
-                text: 'Сотрудничайте с нашей командой, чтобы настроить ваше путешествие в соответствии с вашими потребностями.',
-                активный: false
+                title: 'Индивидуальная поездка, созданная специально для вас',
+                text: 'Наша команда поможет вам разработать идеальный маршрут с учетом ваших предпочтений.',
+                active: false
               },
               {
                 num: '3',
-                title: 'Насладитесь путешествием с удовольствием',
-                text: 'Осуществите свое путешествие с нашими лучшими водителями и гидами.',
-                активный: true
+                title: 'Наслаждайтесь эксклюзивным обслуживанием',
+                text: 'Наслаждайтесь первоклассным обслуживанием с опытными водителями и индивидуальным вниманием.',
+                active: true
               }
             ]
         },
       services: {
-              h2: "С нами вы найдете лучшее обслуживание на острове.",
-              p: "У нас есть команда высококвалифицированных специалистов.",
-              serv1h4: 'Различные направления',
-              serv1p: 'Исследуйте разнообразие уникальных направлений, от величественных гор до живописных пляжей и оживленных городов.',
-              serv2h4: 'Конкурентоспособные цены',
-              serv2p: 'Мы предлагаем конкурентоспособные цены, чтобы ваше путешествие было доступным и запоминающимся.',
-              serv3h4: 'Простое бронирование',
-              serv3p: 'Мы делаем процесс бронирования вашего путешествия простым и быстрым.',
+              h2: "Наслаждайтесь лучшим транспортным обслуживанием с нами",
+              p: "Наша команда опытных профессионалов легко адаптируется к запросам каждого путешественника, создавая индивидуальные впечатления, превосходящие ожидания.",
+              serv1h4: 'Экскурсии',
+              serv1p: 'Откройте для себя яркие города, деревни и все скрытые жемчужины на своем пути.',
+              serv2h4: 'Частный транспорт',
+              serv2p: 'Легкое бронирование среди наших автомобилей премиум-класса.',
+              serv3h4: 'Трансферы',
+              serv3p: 'Путешествуйте с комфортом, наслаждайтесь плавными поездками.',
               
         },
        feedback: {
-               h2: 'Что говорят клиенты о наших турах',
-               p: 'Узнайте, что говорят наши клиенты о наших турах, делясь своими незабываемыми впечатлениями и положительными отзывами.',
+               h2: 'Что говорят клиенты о вас',
+               p: 'Узнайте, что говорят наши клиенты о наших турах, делясь своими незабываемыми впечатлениями и восторженными отзывами.',
        },
        itinerary:[
           
