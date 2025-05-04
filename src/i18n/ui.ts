@@ -128,7 +128,7 @@ export const languages = {
             ],
           },
           {
-            title: "Sunset tour in Havana",
+            title: "Sunset Tour in Havana",
             place: ["Havana", "La Habana"],
             details: [
               "Pickup at your accommodation or hotel at 10:00 AM in Varadero.",
@@ -157,7 +157,7 @@ export const languages = {
             ],
           },
           {
-            title: "Havana tour + Cannon Shot",
+            title: "Havana Tour + Cannon Shot",
            place: ["Havana", "La Habana"],
             details: [
               "Pickup at your accommodation or hotel at 10:00 am.",
