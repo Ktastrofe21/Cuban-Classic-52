@@ -109,12 +109,13 @@ export const languages = {
       
         },
         feedback: {
-            h2: 'What Clients Say About U',
+            h2: 'What Clients Say About Us',
             p:'Find out what our customers have to say about our tours, as they share their unforgettable experiences and rave reviews.',
-        },
+            coment:'Write us your comment',
+          },
         itinerary:[
           {
-            title: "One day in Havana",
+            title: "One day tour in Havana",
             place: ["Havana", "La Habana"],
             details: [
               "Departure time from the hotel ~8:00 Arrival time at the hotel ~17:00-18:00",
@@ -127,7 +128,7 @@ export const languages = {
             ],
           },
           {
-            title: "Sunset in Havana",
+            title: "Sunset tour in Havana",
             place: ["Havana", "La Habana"],
             details: [
               "Pickup at your accommodation or hotel at 10:00 AM in Varadero.",
@@ -156,7 +157,7 @@ export const languages = {
             ],
           },
           {
-            title: "Havana Cannon Shot",
+            title: "Havana tour + Cannon Shot",
            place: ["Havana", "La Habana"],
             details: [
               "Pickup at your accommodation or hotel at 10:00 am.",
@@ -184,7 +185,7 @@ export const languages = {
             ],
           },
           {
-            title: "Havana + Tropicana",
+            title: "Havana tour + Tropicana",
             place: ["Havana", "La Habana"],
             details: [
               "Pickup at your accommodation or hotel at 10:30 am.",
@@ -210,7 +211,7 @@ export const languages = {
             ],
           },
           {
-            title: "Zapata Swamp",
+            title: "Zapata Swamp Tour",
             place: "Matanzas",
             details: [
               "Departure from the hotel at 8 am.",
@@ -230,7 +231,7 @@ export const languages = {
             ],
           },
           {
-            title: "Matanzas",
+            title: "Matanzas Tour",
             place: "Matanzas",
             details: [
               "Departure from the hotel at 9:00 am.",
@@ -262,7 +263,7 @@ export const languages = {
             ],
           },
             {
-            title: "Trinidad - Cienfuegos(Optional Nicho)",
+            title: "Trinidad - Cienfuegos Tour (Optional Nicho)",
             place: ["Central Region", "Región Central"],
             details: [
             "Pickup at your accommodation or hotel at 06:30 am.",
@@ -302,7 +303,7 @@ export const languages = {
             ],
             },
             {
-            title: "Viñales - Soroa",
+            title: "Viñales - Soroa Tour",
             place: "Pinar del Río",
             details: [
             "Pickup at the hotel or accommodation at 8:30 am.",
@@ -1146,7 +1147,8 @@ export const languages = {
         feedback: {
               h2: 'Lo que dicen los clientes sobre nuestros tours',
               p:'Descubra lo que nuestros clientes tienen que decir sobre nuestros tours, mientras comparten sus experiencias inolvidables y críticas favorables.',
-        },
+              coment:'Escríbenos tu comentario',
+            },
 
         itinerary:[
           
@@ -2183,7 +2185,8 @@ export const languages = {
        feedback: {
                h2: 'Что говорят клиенты о вас',
                p: 'Узнайте, что говорят наши клиенты о наших турах, делясь своими незабываемыми впечатлениями и восторженными отзывами.',
-       },
+              coment:'Напишите нам ваш отзыв',
+              },
        itinerary:[
           
         {
