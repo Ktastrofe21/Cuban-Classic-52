@@ -185,7 +185,7 @@ export const languages = {
             ],
           },
           {
-            title: "Havana tour + Tropicana",
+            title: "Havana Tour + Tropicana",
             place: ["Havana", "La Habana"],
             details: [
               "Pickup at your accommodation or hotel at 10:30 am.",
