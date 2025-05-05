@@ -24,11 +24,11 @@ const PlacesCard = ({placeName, lang}) => {
     );
 
     return (
-        <div className='px-10 pb-12 pt-8 flex-1 min-h-[calc(100vh-200px)]'>
-            <ul className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-2 justify-items-center'>{ 
+        <div className='px-10 pb-12 pt-8 flex-1 min-h-[calc(100vh-100px)]'>
+            <ul className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10 justify-items-center'>{ 
                 filteredPlaces.map(element =>(
-                    <li key={element.title} className='bg-gray-800 rounded-lg flex-col section w-full max-w-[400px]'>
-                        <div className='aspect-[3/3]'>
+                    <li key={element.title} className='bg-gray-800 rounded-lg flex-col section w-full max-w-[460px]'>
+                        <div className='aspect-[4/3]'>
                             <img 
                                 src={element.image} 
                                 alt={element.title} 

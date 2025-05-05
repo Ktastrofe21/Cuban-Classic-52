@@ -15,7 +15,11 @@ const ButtonsPlaces = ({ placeName, lang }) => {
   const bookNowText = {
     en: "Book Now",
     es: "Reservar Ahora",
-    ru: "Забронируйте сейчас"
+    ru: "Забронируйте сейчас",
+    pt: "Reservar Agora",
+    de: "Jetzt buchen",
+    fr: "Réservez maintenant",
+    it: "Prenota ora"
   }[lang] || "Book Now";
 
   const buttonClass = "w-full bg-gradient-to-r from-emerald-500 to-teal-600 hover:from-emerald-600 hover:to-teal-700 text-white font-medium py-3 px-8 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1";

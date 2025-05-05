@@ -27,11 +27,10 @@ const elementos = t('prov');
 
 const place = prov.find((place:Place) => place.slug === name)
 
-// console.log(itinerarySec)
+
 ---
 
-<Layout title=`${place?.name} | Кубинские классические туры` desc=`Узнайте о маршрутах и ​​наиболее знаковых местах для посещения в городе ${place?.name}.`>
-
+<Layout title={`${place?.name} | Viaggi Classici Cubani`} desc={`Scopri gli itinerari e i luoghi più emblematici da visitare nella città di ${place?.name}.`}>
     <section class="h-screen"
     >
         <a href={lang === 'en' ? '/#places' : `/${lang}/#places`} class="rounded absolute top-0 left-0 z-50 bg-gradient-to-r from-emerald-400 to-teal-600  w-8 h-8 justify-center items-center flex m-5"> {'<'} </a>
