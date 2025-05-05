@@ -1,0 +1,98 @@
+---
+import '@fontsource-variable/onest';
+import { ViewTransitions } from 'astro:transitions';
+import  SpeedInsights  from "@vercel/speed-insights/astro"
+interface Props {
+	title: string;
+	desc:string
+}
+
+const { title, desc } = Astro.props;
+import { getLangFromUrl } from '../i18n/utils.js';
+import { SEO } from 'astro-seo';
+
+const lang = getLangFromUrl(Astro.url);
+---
+
+<!doctype html>
+<html lang={lang}>
+	<head>
+		<SEO
+		title={title}
+		description={desc}
+		openGraph={{
+		  basic: {
+			title: title,
+			type: "website",
+			image: "/og-logo.png",
+		  }
+		}}
+		
+		extend={{
+		  // extending the default meta tags
+		  meta: [
+			{
+			  name: "twitter:image",
+			  content: "/og-logo.png",
+			},
+			{ name: "twitter:title", content: title },
+			{ name: "twitter:description", content: desc },
+		  ],
+		}}
+	  />
+		<meta charset="UTF-8" />
+		<meta name="description" content={desc} />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/x-icon" href="/og-logo.png" />
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+		<meta name="generator" content={Astro.generator} />
+		<title>{title}</title>
+		<SpeedInsights/>
+		<ViewTransitions />
+	</head>
+	<body >
+		
+		<slot />
+	</body>
+
+</html>
+<style is:global>
+	:root {
+		color-scheme: dark;	
+	}
+	html {
+		background-color: #eae8e8;
+		font-family:'Onest Variable', system-ui, sans-serif;
+		scroll-behavior: smooth;
+	}
+	body {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+	}
+	@media (prefers-reduced-motion: reduce) {
+		html {
+			scroll-behavior: auto;
+		}
+	}
+	::-webkit-scrollbar {
+    height: 8px;
+	width: 8px;
+    scroll-padding-left: 1rem;
+   }
+   
+   ::-webkit-scrollbar-track {
+    background: #fffefe; /* Color de fondo de la pista de la barra de desplazamiento */
+   }
+   
+   ::-webkit-scrollbar-thumb {
+    background: #036a3f; /* Color de la barra de desplazamiento */
+    border-radius: 15px;
+   }
+   
+   ::-webkit-scrollbar-thumb:hover {
+    background: #2bc69068; /* Color de la barra de desplazamiento al pasar el mouse */
+   }
+
+</style>

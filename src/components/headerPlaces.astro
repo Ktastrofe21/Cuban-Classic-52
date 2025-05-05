@@ -1,0 +1,49 @@
+---
+import Itinerary from '../components/react/Itinerary';
+import { getLangFromUrl, useTranslations } from '../i18n/utils.js';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+interface Place {
+  slug: string;
+  img: string;
+  name: string;
+  desc: string;
+}
+const elementos = t('prov');
+const prov = elementos.places;
+const {name} = Astro.params;
+
+const place = prov.find((place:Place) => place.slug === name);
+---
+
+<div class="relative min-h-[300px] sm:h-[400px] lg:h-[500px] bg-cover bg-center flex flex-col justify-between"
+     style={`background-image: url(${place?.img})`}>
+     
+  <div class="absolute inset-0 bg-gradient-to-t from-[#07111dee] via-[#25252580] to-transparent z-10"></div>
+  
+  <div class="flex flex-col items-center justify-center text-center z-20 w-full px-4 pt-8 sm:pt-12 lg:pt-16">
+    <h1 class="text-3xl xs:text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-white drop-shadow-lg mb-2">
+      {elementos.visit} {place?.name}
+    </h1>
+    <p class="text-xs sm:text-sm md:text-base text-white/90 mt-2 max-w-2xl drop-shadow-md px-2 sm:px-4">
+      {place?.desc}
+    </p>
+  </div>
+  
+  <div class="z-20 w-full px-2 sm:px-4 pb-4 sm:pb-8">
+    <div class="
+      bg-white/10 dark:bg-gray-800/20 
+      backdrop-blur-sm 
+      rounded-xl 
+      p-3 sm:p-4
+      shadow-lg 
+      border border-white/10 
+      w-full sm:w-fit
+      mx-auto
+    ">
+      <Itinerary client:visible place={place?.slug} lang={lang} />
+    </div>
+  </div>
+</div>

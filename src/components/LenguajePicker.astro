@@ -1,0 +1,32 @@
+---
+import { languages } from '../i18n/ui';
+const { currentLocale } = Astro;
+---
+
+<div class="relative inline-block">
+  <button 
+    id="language-toggle"
+    class="text-white hover:text-emerald-300 font-medium text-lg px-3 py-1 transition-colors"
+    onclick="document.getElementById('language-dropdown').classList.toggle('hidden')"
+  >
+    {languages[currentLocale]}
+    <span class="ml-1 text-sm">▼</span>
+  </button>
+  
+  <div 
+    id="language-dropdown"
+    class="absolute hidden right-0 mt-2 bg-gray-500 bg-opacity-50 rounded-lg py-1 z-30 backdrop-blur-sm min-w-[120px]"
+  >
+    {Object.entries(languages).map(([lang, label]) => (
+      <a 
+        href={lang === 'en' ? '/' : `/${lang}/`}
+        class={`block px-4 py-2 text-white hover:text-emerald-300 transition-colors ${
+          lang === currentLocale ? 'font-bold text-emerald-300' : 'font-medium'
+        }`}
+        onclick="document.getElementById('language-dropdown').classList.add('hidden')"
+      >
+        {label}
+      </a>
+    ))}
+  </div>
+</div>

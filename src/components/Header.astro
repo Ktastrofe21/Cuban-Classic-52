@@ -1,0 +1,73 @@
+---
+import Logo from './icons/logo.astro'
+import LenguajePicker from './LenguajePicker.astro'
+import MenuOverlay from './react/MenuOverlay'
+import { getLangFromUrl, useTranslations } from '../i18n/utils.js';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const elementos = t('nav');
+
+
+const links = [
+    {
+        name: elementos.places,
+        href:'/#places'
+    },
+    {
+        name:elementos.about,
+        href:'/#about'
+    },
+    {
+        name:elementos.services,
+        href:'/#services'
+    },
+  
+    {
+        name:elementos.feedback,
+        href:'/#feedback'
+    },
+]
+
+---
+
+<header class="flex justify-between items-center w-full absolute top-0 z-20 pt-5 sm:px-20 px-5 revealHeader">
+    <!-- Logo -->
+    <div class="z-30">
+        <a href={lang === 'en' ? '/' : `/${lang}`}>
+            <img src="/public/logo11.png" alt="Logo" class="sm:w-40 w-32">
+        </a>
+    </div>
+    
+    <!-- Navegación desktop -->
+    <nav class="md:block hidden z-30">
+        <ul>
+            <li class="gap-x-10 flex">
+                {links.map(link => (
+                    <a 
+                        href={lang === 'en' ? link.href : `/${lang}${link.href}`}
+                        class="hover:text-emerald-600 transition-colors text-lg text-white"
+                    >
+                        {link.name}
+                    </a>
+                ))}
+            </li>
+        </ul>
+    </nav>
+    
+    <!-- Controles -->
+    <div class="flex sm:gap-10 gap-5 items-center z-30">
+        <LenguajePicker client:load />
+        <!-- Solo el botón de hamburguesa aquí -->
+        <div class="md:hidden w-10"></div> <!-- Espacio reservado -->
+    </div>
+</header>
+
+<!-- MenuOverlay se renderiza fuera del navbar -->
+<MenuOverlay 
+  client:load 
+  links={links.map(link => ({
+    ...link,
+    href: lang === 'en' ? link.href : `/${lang}${link.href}`
+  }))} 
+/>

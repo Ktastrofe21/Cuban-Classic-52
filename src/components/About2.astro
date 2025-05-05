@@ -1,0 +1,66 @@
+---
+import { getLangFromUrl, useTranslations } from '../i18n/utils.js';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const about2 = t('about2');
+
+interface Elemento {
+  num: number;
+  title: string;
+  text: string;
+  active: boolean;
+}
+---
+
+<section class="relative max-w-7xl mx-auto px-6 py-12 lg:py-16" id="about2">
+  <div class="text-center mb-12">
+    <h2 class="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-teal-600 leading-relaxed tracking-tightest font-kerning-auto letter-spacing-wide pb-1">
+      {about2.h2}
+    </h2>
+    <div class="mx-auto mt-3 w-20 h-1 bg-gradient-to-r from-emerald-400 to-teal-600 rounded-full"></div>
+  </div>
+
+  <div class="flex flex-col lg:flex-row-reverse gap-8 lg:gap-10 items-start">
+    <div class="lg:w-1/2 flex flex-col gap-5 lg:pr-6">
+      <div class="space-y-5">
+        {about2.elementos.map((elemento: Elemento) => (
+          <div class="flex gap-4 items-start group transition-all duration-300 hover:-translate-y-1">
+            <div class={`flex-shrink-0 w-12 h-12 rounded-full flex items-center justify-center text-lg font-bold transition-all ${elemento.active ? 'bg-gradient-to-br from-emerald-500 to-teal-600 text-white shadow-md' : 'bg-gray-100 text-gray-600 border border-gray-200'}`}>
+              {elemento.num}
+            </div>
+            <div class={`flex-1 pl-3 border-l-2 py-1 ${elemento.active ? 'border-emerald-400' : 'border-gray-100 group-hover:border-gray-200'}`}>
+              <h3 class={`text-lg font-semibold mb-1 ${elemento.active ? 'text-emerald-600' : 'text-gray-800'}`}>
+                {elemento.title}
+              </h3>
+              <p class="text-gray-600 leading-relaxed text-sm sm:text-base">
+                {elemento.text}
+              </p>
+            </div>
+          </div>
+        ))}
+      </div> 
+      <div class="mt-5 relative group overflow-hidden rounded-xl shadow-lg aspect-[4/3]">
+        <img loading="lazy" src="/images/Car1.jpg" alt="Transporte adicional" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"/>
+        <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+      </div>
+    </div>
+    
+    <div class="lg:w-1/2 relative">
+      <div class="grid grid-cols-2 gap-4 h-auto">
+        <div class="relative group overflow-hidden rounded-xl shadow-lg aspect-square">
+          <img loading="lazy" src="/images/Fiesta.png" alt="Playa" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+        </div>
+        <div class="relative group overflow-hidden rounded-xl shadow-lg aspect-square">
+          <img loading="lazy" src="/images/Ciudad.png" alt="Ciudad" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+        </div>
+        <div class="relative group overflow-hidden rounded-xl shadow-lg aspect-[4/3] col-span-2">
+          <img loading="lazy" src="/images/Playa.png" alt="Playa" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"/>
+          <div class="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

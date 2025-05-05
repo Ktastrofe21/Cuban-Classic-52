@@ -1,0 +1,78 @@
+---
+import Layout from '../layouts/Layout.astro';
+// import {places} from '../data/prov'
+// import {itineraryData} from '../data/itinerary'
+import HeaderPlaces from '../components/headerPlaces.astro';
+import PlacesCard from '../components/react/PlacesCard'
+import ButtonsPlaces from '../components/react/ButtonsPlaces'
+import Footer from '../components/Footer.astro'
+import '../utils/animation.css'
+import { getLangFromUrl, useTranslations } from '../i18n/utils.js';
+
+
+const lang = getLangFromUrl(Astro.url);
+
+const {name} = Astro.params
+
+const t = useTranslations(lang);
+const elementos = t('prov');
+ const prov = elementos.places
+ const itineraryData = t('itinerary');
+ const itinerarySec = t('itinerarySec')
+ 
+ interface Place {
+ slug: string;
+ img: string;
+ name: string;
+ desc: string;
+}
+
+const place = prov.find((place:Place) => place.slug === name)
+
+
+
+
+
+---
+
+<Layout title=`${place?.name} | Cuban Classic Trips` desc=`Learn about the most emblematic itineraries and places to visit in the city of ${place?.name}.`>
+    <!-- transition:name={`portada ${name} box`} -->
+    <section class="h-screen"
+    >
+        <a href={lang === 'en' ? '/#places' : `/${lang}/#places`} class="rounded absolute top-0 left-0 z-50 bg-gradient-to-r from-emerald-400 to-teal-600  w-8 h-8 justify-center items-center flex m-5"> {'<'} </a>
+
+        <HeaderPlaces/>
+          
+           
+                <div class="p-5 revealItinerary aspect-[16/5]">
+                    <h4 class="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-emerald-400 to-teal-600 
+                    leading-relaxed tracking-tightest font-kerning-auto letter-spacing-wide pb-1 text-center">{itinerarySec.h4}</h4>
+                    <div class="mx-auto mt-4 w-24 h-1 bg-gradient-to-r from-emerald-400 to-teal-600 rounded-full"></div>
+
+                    <p id="itinerario" class="text-start revealItinerary leading-relaxed text-gray-700 text-base sm:text-lg font-semibold px-5"></p>   
+                </div>
+             <ButtonsPlaces  placeName={place?.name} lang= {lang}/>
+             <div class="h-screen">
+                 <PlacesCard placeName={place?.slug} lang={lang} client:visible/>
+                <Footer/>
+            </div>
+    </section>
+    
+</Layout>
+
+<script define:vars={{ itineraryData }}>
+    document.addEventListener('itineraryChange', (e) => {
+        const elemento = itineraryData.find((element) => element.title === e.detail);
+        const displayElement = document.getElementById('itinerario');
+        const formattedDetails = elemento.details.map(detail => `✅ ${detail}`).join('\n');
+        const htmlFormattedDetails = formattedDetails.replace(/\n/g, '<br>');
+        displayElement.classList.add('fade-out');
+        setTimeout(() => {
+            displayElement.classList.remove('fade-out');
+            displayElement.classList.add('fade-in');
+            displayElement.innerHTML = htmlFormattedDetails; 
+            displayElement.classList.remove('fade-in');
+        }, 300);
+    });
+  
+    </script>

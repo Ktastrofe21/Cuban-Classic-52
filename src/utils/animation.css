@@ -1,0 +1,256 @@
+ .section {
+    animation: reveal ease-in-out both;
+    animation-timeline: view();
+    animation-range: cover 10% contain 50%;
+}
+
+
+.textDesapear {
+    animation: textDesapear linear both;
+    animation-timeline: view();
+    animation-range: entry 180% exit 60%;
+    
+}
+
+.revealHeader {
+    animation: revealHeader 500ms ease-out forwards;
+}
+.revealHero {
+    animation: revealHero 600ms ease-out forwards;
+}
+
+.revealPlaces{
+    animation: revealPlaces linear both;
+    animation-timeline: view();
+    animation-range: cover 10%  contain 40%;
+}
+.revealItinerary {
+    animation: revealHeader 300ms ease-out forwards;
+}
+
+.progres {
+    animation: Progres ease-in-out both;
+    animation-timeline: view();
+    animation-range: cover 10%  contain 50%;
+} 
+
+
+/* Estilos que solo se aplicarán si el navegador NO soporta animation-timeline */
+@supports not (animation-timeline: view()) {
+    .section {
+        animation: reveal 500ms ease-out forwards;
+    }
+
+    .textDesapear {
+        animation: reveal 500ms ease-out forwards;
+    }
+
+    .revealHeader {
+        animation: revealHeader 500ms ease-out forwards;
+    }
+
+    .revealHero {
+        animation: revealHero 600ms ease-out forwards;
+    }
+
+    .revealPlaces {
+        animation: revealPlaces 500ms ease-out forwards;
+    }
+
+    .revealItinerary {
+        animation: revealHeader 300ms ease-out forwards;
+    }
+
+    .progres {
+        animation: Progres 500ms ease-out forwards;
+    }
+}
+
+/* .revealAboutText{
+    animation: revealAboutText linear both;
+    animation-timeline: view();
+    animation-range: contain 0%  contain 40%;
+}
+.revealAboutImg{
+    animation: revealAboutImg ease-in both;
+    animation-timeline: view();
+    animation-range: contain -20%  contain 10%;
+} */
+
+/* .textScroll {
+    animation: textScroll linear both;
+    animation-timeline: view();
+    animation-range: cover 0%  contain 10%;
+} */
+@keyframes textScroll {
+    from {
+        opacity: 0;
+        scale: .6;
+        
+    }
+
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+
+@keyframes Progres {
+    from {
+        opacity: 0;
+        scale: 0;
+        translate: 0px 100px;
+    }
+
+    to{
+        opacity: 1;
+        scale: 1;
+        translate: 0 0px;
+    }
+}
+
+
+@keyframes textDesapear {
+    from {
+        opacity: 1;
+        translate: 0px 0px;
+        scale: 1;
+    }
+
+    to{
+        opacity: 0;
+        translate: 0px 180px;
+        scale: 1;
+    }
+}
+
+@keyframes revealPlaces {
+    from {
+        opacity: 0;
+        scale: .9;
+    }
+
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+
+
+
+
+@keyframes revealHero {
+    from {
+        opacity: 0;
+        translate: -500px 0px;
+    }
+
+    to{
+        opacity: 1;
+        translate: 0 0px;
+    }
+}
+
+
+
+@keyframes revealHeader {
+    from {
+        opacity: 0;
+        translate: 0 -50px;
+    }
+
+    to{
+        opacity: 1;
+        translate: 0 0px;
+    }
+}
+@keyframes revealItinerary {
+    from {
+        opacity: 0;
+        
+    }
+
+    to{
+        opacity: 1;
+    }
+}
+@keyframes revealAboutText {
+    from {
+        opacity: 0;
+        translate: 20px 0px;
+    }
+
+    to{
+        opacity: 1;
+        translate: 0 0px;
+    }
+}
+@keyframes revealAboutImg {
+    from {
+        opacity: 0;
+        scale: .6;
+        rotate: -5deg;
+    }
+
+    to{
+        opacity: 1;
+        scale: 1;
+        rotate: 0;
+        
+    }
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+        translate: 0px 200px;
+        
+    }
+
+    to{
+        opacity: 1;
+        translate: 0 0;
+        
+    }
+}
+
+
+
+
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.fade-out {
+    animation: fadeOut 300ms forwards;
+}
+
+.fade-in {
+    animation: fadeIn 300ms forwards;
+}
+
+
+
+
+
+
+
+
+

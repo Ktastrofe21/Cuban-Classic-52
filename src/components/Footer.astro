@@ -1,0 +1,75 @@
+---
+import Facebook from './icons/Facebook.astro'
+import Instagram from './icons/Instagram.astro'
+import Whatsapp from './icons/Whatsapp.astro'
+
+import { getLangFromUrl, useTranslations } from '../i18n/utils.js';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const elementos = t('nav');
+
+
+const links = [
+    {
+        name:elementos.home,
+        href:'/'
+    },
+    {
+        name:elementos.places,
+        href:'/#places'
+    },
+ 
+    {
+        name:elementos.matanzas,
+        href:'/Matanzas'
+    },
+    {
+        name:elementos.services,
+        href:'/#services'
+    },
+    {
+        name:elementos.pinar,
+        href:'/Pinar del Río'
+    },
+    {
+        name:elementos.central,
+        href:'/Región Central'
+    },
+    {
+        name:elementos.about,
+        href:'/#about'
+    },
+
+    {
+        name:elementos.habana,
+        href:'/La Habana'
+    },
+   
+]
+
+---
+
+<footer class="h-auto flex items-center md:justify-around justify-start sm:flex-row flex-wrap dark:bg-gray-900/80 sm:p-10">
+    <div class=" md:m-0 m-5 ">
+        <!-- <Logo class="w-28"> -->
+            <img src="/logo11.png" alt="Logo" class="w-40">
+        </div>
+    <ul class=" sm:py-0 py-5 sm:px-0 px-5 md:w-auto w-full">
+        <li class=" sm:gap-5 gap-2 grid grid-cols-3">
+            {
+                links.map(link =>(
+                <a href={lang === 'en' ? link.href : `/${lang}${link.href}`} 
+                class="hover:text-emerald-600 transition-colors">
+                    {link.name}
+                </a>
+                ))
+            }
+        </li>
+    </ul>
+    <div class="flex sm:gap-x-8 gap-x-4 items-center justify-start md:w-auto w-full sm:p-0 p-4 ">
+        <Whatsapp class="w-10 h-10 hover:scale-110 transition-all"/>
+        <Facebook class="w-10 h-10 hover:scale-110 transition-all"/>
+        <Instagram class="w-10 h-10 hover:scale-110 transition-all"/>
+    </div>
+</footer>

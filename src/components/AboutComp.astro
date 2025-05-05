@@ -1,0 +1,63 @@
+---
+import Authentically from './icons/authentically.astro'
+import Punctuality from './icons/punctuality.astro'
+import { getLangFromUrl, useTranslations } from '../i18n/utils.js';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const aboutCompany = t('aboutComp');
+---
+
+<section class="relative max-w-7xl mx-auto px-6 py-12 lg:py-16" id="about">
+  <div class="flex flex-col lg:flex-row gap-8 lg:gap-10 items-center">
+    <div class="lg:w-1/2 space-y-6 lg:pr-8">
+      <div class="relative">
+        <h2 class="text-4xl md:text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-emerald-500 to-teal-600">
+          {aboutCompany.h2}
+          <span class="block w-16 h-1.5 bg-gradient-to-r from-emerald-400 to-teal-500 mt-3 rounded-full"></span>
+        </h2>
+      </div>
+
+      <div class="prose prose-lg text-gray-600">
+        <p class="leading-relaxed text-gray-700 text-base sm:text-lg font-semibold">
+          {aboutCompany.pdesc}
+        </p>
+        <ul class="mt-4 space-y-2 pl-5">
+          <li class="flex items-start">
+            <span class="flex-shrink-0 mt-1 mr-3 text-emerald-500">•</span>
+            <span class="text-gray-700 text-base sm:text-lg font-semibold">{aboutCompany.p}</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="grid sm:grid-cols-2 gap-6 w-full lg:w-1/2">
+      <div class="group relative rounded-xl overflow-hidden h-[240px] w-full shadow-lg transition-all duration-300 hover:-translate-y-1">
+        <img src="/images/punctuality.png" alt="Puntualidad" class="w-full h-full object-cover" loading="lazy"/>
+        <div class="absolute inset-0 flex flex-col justify-between p-6 bg-gradient-to-t from-black/60 to-transparent">
+          <div class="w-16 h-16 glass-icon rounded-xl flex items-center justify-center self-start">
+            <Punctuality class="w-10 h-10 stroke-white"/>
+          </div>
+          <div class="space-y-2 text-white">
+            <h3 class="text-xl sm:text-2xl font-bold drop-shadow-md">{aboutCompany.secT}</h3>
+            <p class="text-sm sm:text-base drop-shadow-md">{aboutCompany.secP}</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="group relative rounded-xl overflow-hidden h-[240px] w-full shadow-lg transition-all duration-300 hover:-translate-y-1">
+        <img src="/images/Car3.jpg" alt="Confort" class="w-full h-full object-cover" loading="lazy"/>
+        <div class="absolute inset-0 flex flex-col justify-between p-6 bg-gradient-to-t from-black/60 to-transparent">
+          <div class="w-16 h-16 glass-icon rounded-xl flex items-center justify-center self-start">
+            <Authentically class="w-10 h-10 stroke-white"/>  
+          </div>
+          <div class="space-y-2 text-white">
+            <h3 class="text-xl sm:text-2xl font-bold drop-shadow-md">{aboutCompany.conT}</h3>
+            <p class="text-sm sm:text-base drop-shadow-md">{aboutCompany.conP}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

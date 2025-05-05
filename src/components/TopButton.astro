@@ -1,0 +1,24 @@
+---
+import UpArrow from "./icons/UpArrow.astro";
+---
+
+<button id="scrollToTop" class="fixed bottom-8 right-8 w-14 h-14 rounded-full bg-emerald-400 flex justify-center items-center text-4xl font-bold progres z-[100] hover:scale-125 transition-all">
+	<UpArrow class="fill-white w-6"/>
+</button>
+
+<script>
+
+	document.addEventListener('astro:page-load', () => {
+		const scrollToTopButton = document.getElementById('scrollToTop');
+		if (scrollToTopButton) {
+			scrollToTopButton.addEventListener('click', function() {
+				window.scrollTo({
+					top: 0,
+					behavior: 'auto'
+				});
+			});
+		}
+	});
+
+
+   </script>
