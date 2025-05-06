@@ -14,9 +14,11 @@ const languageNames = {
 
 
 // Función para obtener el nombre del idioma
-function getLanguageName(locale: String) {
+type LanguageCode = keyof typeof languageNames;
 
-  return languageNames[locale] || 'Unknown';
+function getLanguageName(locale: string | undefined) {
+  const validLocale = (locale && locale in languageNames ? locale : 'en') as LanguageCode;
+  return languageNames[validLocale] || 'Unknown';
 }
 ---
 

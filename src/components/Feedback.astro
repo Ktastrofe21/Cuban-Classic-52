@@ -133,8 +133,9 @@ const testimonials = [
         star: 4.5
     }
 ]
+type SupportedLanguages = 'en' | 'es' | 'ru' | 'pt' | 'de' | 'fr' | 'it';
 
-const lang = getLangFromUrl(Astro.url);
+const lang = getLangFromUrl(Astro.url) as SupportedLanguages; ;
 const t = useTranslations(lang);
 
 const sectionContent = t('feedback');
